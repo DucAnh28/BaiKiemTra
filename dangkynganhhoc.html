@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Đăng ký ngành học</title>
+    <style>
+        #message {
+            display: none;
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #d4edda;
+            color: #155724;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+<h1>ĐĂNG KÝ NGÀNH HỌC</h1>
+<form id="regForm">
+    Tên đăng nhập (*): <input type="text" id="user" value="SV001"><br><br>
+    Mật khẩu (*): <input type="password" value="123456"><br><br>
+    Email: <input type="email" value="phamducanh@ptit.com"><br><br>
+    Giới tính (*):
+    <input type="radio" name="gt" checked> Nam
+    <input type="radio" name="gt"> Nữ<br><br>
+    Sở thích:
+    <input type="checkbox" checked> Lập trình
+    <input type="checkbox"> Thể thao<br><br>
+    Chọn ngành học (*):
+    <select id="major">
+        <option value="Kỹ thuật phần mềm">Kỹ thuật phần mềm</option>
+        <option value="An toàn thông tin">An toàn thông tin</option>
+    </select><br><br>
+    <button type="button" onclick="submitReg()">Đăng ký</button>
+</form>
+
+<div id="message"></div>
+
+<script>
+    function submitReg() {
+        const user = document.getElementById("user").value;
+        const major = document.getElementById("major").value;
+        const msgDiv = document.getElementById("message");
+
+        msgDiv.innerHTML = "🎉 Chúc mừng " + user + "!, Bạn đã đăng ký ngành: " + major;
+        msgDiv.style.display = "block";
+    }
+</script>
+</body>
+</html>

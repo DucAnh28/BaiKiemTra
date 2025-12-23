@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Đăng Ký Nhận Bản Tin</title>
+    <style>
+        body {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            font-family: Arial, serif;
+        }
+
+        .container {
+            padding: 50px;
+        }
+
+        input {
+            padding: 5px;
+            margin: 5px;
+        }
+
+        .footer {
+            margin-top: 20px;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h2>Đăng Ký Nhận Bản Tin</h2>
+    <form id="newsletterForm">
+        Email: <label for="email"></label><input type="email" id="email" placeholder="Nhập email của bạn">
+        Họ Tên: <label for="name"></label><input type="text" id="name" placeholder="Nhập họ và tên">
+        <button type="button" onclick="validate()">Đăng ký</button>
+    </form>
+    <div class="footer">
+        © 2025 HỌC VIỆN CÔNG NGHỆ BƯU CHÍNH VIỄN THÔNG. All rights reserved.
+    </div>
+</div>
+
+<script>
+    function validate() {
+        var email = document.getElementById("email").value;
+        var name = document.getElementById("name").value;
+        if (email === "" || name === "") {
+            alert("Vui lòng nhập đủ email và thông tin họ tên!");
+        } else {
+            alert("Đăng ký thành công cho: " + name);
+        }
+    }
+</script>
+</body>
+</html>
